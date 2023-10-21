@@ -49,12 +49,6 @@ app.get("/products", async (req, res) => {
     res.send(result);
   });
 
-  app.post("/selectedProduct", async (req, res) => {
-    const body = req.body;
-    console.log(body);
-    const result = await cartCollection.insertOne(body);
-    res.send(result);
-  });
 
   app.get("/myCart", async (req, res) => {
  
